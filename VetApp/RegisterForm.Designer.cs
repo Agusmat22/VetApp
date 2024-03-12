@@ -96,6 +96,7 @@
             // 
             txtName.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtName.Location = new Point(527, 201);
+            txtName.MaxLength = 99999999;
             txtName.Name = "txtName";
             txtName.Size = new Size(236, 25);
             txtName.TabIndex = 13;
@@ -106,6 +107,7 @@
             // 
             txtDni.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtDni.Location = new Point(527, 262);
+            txtDni.MaxLength = 99999999;
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(236, 25);
             txtDni.TabIndex = 14;
@@ -116,6 +118,7 @@
             // 
             txtPhone.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtPhone.Location = new Point(527, 324);
+            txtPhone.MaxLength = 99999999;
             txtPhone.Name = "txtPhone";
             txtPhone.Size = new Size(236, 25);
             txtPhone.TabIndex = 15;

@@ -1,10 +1,15 @@
 using Entidades.Models;
 using Entidades.Presentation;
+using Entidades.Sql;
+using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace VetApp
 {
     public partial class FormMain : Form
     {
+        private Vet vet;
+
         public FormMain()
         {
             InitializeComponent();
@@ -30,9 +35,27 @@ namespace VetApp
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            try
+            {
+
+                List<Pet> pets = ADOpet.GetAll();
+
+                this.vet = new Vet(pets);
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
+        /// <summary>
+        /// Show a form insade of content
+        /// </summary>
+        /// <param name="form"></param>
         private void ShowPanel(Form form)
         {
             // Eliminar cualquier control existente en el panel
@@ -57,8 +80,25 @@ namespace VetApp
 
         private void btnPets_Click(object sender, EventArgs e)
         {
-            this.ShowPanel(new PetsForm());
+            this.ShowPanel(new PetsFor(vet));
 
         }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        /// <summary>
+        /// Estos dos metodos los cree para poder mover el formulario, ya que no contiene FormBorder
+        /// </summary>
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        
     }
 }

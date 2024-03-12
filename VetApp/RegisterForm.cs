@@ -54,36 +54,9 @@ namespace VetApp
         {
             this.tipo = (EPet)this.cmbTipo.SelectedItem;
 
-            string rutaImg;
-            switch (tipo)
-            {
-                case EPet.Perro:
+        
 
-                    rutaImg = SelectPicture("perro");
-
-                    break;
-
-                case EPet.Gato:
-
-                    rutaImg = SelectPicture("gato");
-
-                    break;
-
-                case EPet.Hamster:
-
-                    rutaImg = SelectPicture("hamster");
-
-                    break;
-
-                default:
-
-                    rutaImg = SelectPicture("otros");
-
-
-                    break;
-            }
-
-            this.pcbMascota.Image = Image.FromFile(rutaImg);
+            this.pcbMascota.Image = Image.FromFile(Vet.GetUrlImage(this.tipo.ToString().ToLower()));
 
         }
 
@@ -99,7 +72,7 @@ namespace VetApp
 
         private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) || this.txtDni.Text.Length >= 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true; //ignoro la letra
             }
@@ -108,7 +81,7 @@ namespace VetApp
 
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) || this.txtPhone.Text.Length >= 10 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true; //ignoro la letra
             }
@@ -122,7 +95,7 @@ namespace VetApp
 
         private void txtDni_TextChanged(object sender, EventArgs e)
         {
-            if (this.txtDni.Text != "")
+            if (this.txtDni.Text != "" )
             {
                 
                 this.dni = int.Parse(this.txtDni.Text);
@@ -159,19 +132,6 @@ namespace VetApp
                 }
 
             }
-        }
-
-        private string SelectPicture(string name)
-        {
-            string rutaBase = AppDomain.CurrentDomain.BaseDirectory;
-
-            string rutaRelativa = @$"img\mascotas\{name}.jpg"; // Ajusta según sea necesario
-
-
-            rutaRelativa = Path.GetFullPath(rutaRelativa, rutaBase);
-
-            return rutaRelativa;
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

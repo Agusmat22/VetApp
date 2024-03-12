@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lisandro\\Desktop\\VetApp\\VetApp\\VetApp.csproj": {}
+    "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\VetApp\\VetApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lisandro\\Desktop\\VetApp\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lisandro\\Desktop\\VetApp\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\Lisandro\\Desktop\\VetApp\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\Lisandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lisandro\\Desktop\\VetApp\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lisandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,17 +65,17 @@
         }
       }
     },
-    "C:\\Users\\Lisandro\\Desktop\\VetApp\\VetApp\\VetApp.csproj": {
+    "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\VetApp\\VetApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lisandro\\Desktop\\VetApp\\VetApp\\VetApp.csproj",
+        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\VetApp\\VetApp.csproj",
         "projectName": "VetApp",
-        "projectPath": "C:\\Users\\Lisandro\\Desktop\\VetApp\\VetApp\\VetApp.csproj",
-        "packagesPath": "C:\\Users\\Lisandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lisandro\\Desktop\\VetApp\\VetApp\\obj\\",
+        "projectPath": "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\VetApp\\VetApp.csproj",
+        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\VetApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lisandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,8 +89,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Lisandro\\Desktop\\VetApp\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\Lisandro\\Desktop\\VetApp\\Entidades\\Entidades.csproj"
+              "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\usuario\\Desktop\\Practice\\VetApp\\Entidades\\Entidades.csproj"
               }
             }
           }
